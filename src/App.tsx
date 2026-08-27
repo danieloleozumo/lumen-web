@@ -9,6 +9,7 @@ import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
 import { Entrenamientos } from './pages/Entrenamientos';
 import { Centro } from './pages/Centro';
+import { Equipo } from './pages/Equipo';
 import { Empieza } from './pages/Empieza';
 import { Blog } from './pages/Blog';
 
@@ -22,6 +23,7 @@ function AppContent() {
       {currentRoute === 'home' && <Home />}
       {currentRoute === 'entrenamientos' && <Entrenamientos />}
       {currentRoute === 'centro' && <Centro />}
+      {currentRoute === 'equipo' && <Equipo />}
       {currentRoute === 'empieza' && <Empieza />}
       {currentRoute === 'blog' && <Blog />}
       

@@ -69,8 +69,8 @@ export function Navigation() {
               Blog
             </button>
             <button 
-              onClick={() => navigate('centro')}
-              className={`${currentRoute === 'centro' ? 'text-primary font-bold border-b-2 border-primary pb-1' : 'text-on-surface-variant font-medium hover:text-primary'} transition-colors duration-300`}
+              onClick={() => navigate('equipo')}
+              className={`${currentRoute === 'equipo' ? 'text-primary font-bold border-b-2 border-primary pb-1' : 'text-on-surface-variant font-medium hover:text-primary'} transition-colors duration-300`}
             >
               Equipo
             </button>
@@ -114,7 +114,13 @@ export function Navigation() {
               onClick={() => handleNavClick('centro')}
               className={`text-left ${currentRoute === 'centro' ? 'text-primary font-bold' : ''}`}
             >
-              El Centro & Equipo
+              El Centro
+            </button>
+            <button 
+              onClick={() => handleNavClick('equipo')}
+              className={`text-left ${currentRoute === 'equipo' ? 'text-primary font-bold' : ''}`}
+            >
+              Equipo
             </button>
             <button 
               onClick={() => handleNavClick('blog')}
