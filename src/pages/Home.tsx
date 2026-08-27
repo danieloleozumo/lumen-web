@@ -4,6 +4,7 @@ import { PilatesHighlight } from '../components/PilatesHighlight';
 import { Location } from '../components/Location';
 import { Reveal } from '../components/Reveal';
 import heroHome from '../assets/images/hero_home.png';
+import centroFacade from '../assets/images/centro_facade.png';
 import merchBotella from '../assets/images/merch_botella.png';
 import merchToalla from '../assets/images/merch_toalla.png';
 import merchCamiseta from '../assets/images/merch_camiseta.png';
@@ -21,8 +22,8 @@ export function Home() {
       <section className="relative min-h-[60vh] md:min-h-[80vh] lg:min-h-[921px] flex items-center justify-center px-margin-mobile md:px-margin-desktop overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=2000&auto=format&fit=crop"
-            alt="Pilates Reformer Lumen"
+            src={centroFacade}
+            alt="Fachada Lumen"
             className="w-full h-full object-cover object-center scale-[1.02]"
           />
           {/* Overlay principal - fondo beige sobre toda la imagen para matar el contraste */}

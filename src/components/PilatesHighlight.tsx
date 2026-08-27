@@ -1,5 +1,5 @@
 import { useRouter } from '../router';
-import pilatesImage from '../assets/images/pilates_reformer_studio_1787820786604.jpg';
+import pilatesImage from '../assets/images/centro_pilates.png';
 
 export function PilatesHighlight() {
   const { navigate } = useRouter();

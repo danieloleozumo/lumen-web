@@ -1,5 +1,11 @@
 import { useRouter } from '../router';
 import { Reveal } from '../components/Reveal';
+import centroFacade from '../assets/images/centro_facade.png';
+import centroReception from '../assets/images/centro_reception.png';
+import centroPilates from '../assets/images/centro_pilates.png';
+import centroGym from '../assets/images/centro_gym.png';
+import centroPhysio from '../assets/images/centro_physio.png';
+import centroVestuario from '../assets/images/centro_vestuario.png';
 
 export function Centro() {
   const { navigate } = useRouter();
@@ -10,7 +16,7 @@ export function Centro() {
       <section className="relative h-[70vh] min-h-[600px] w-full flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat bg-fixed grayscale-[0.2]" 
-          style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuC1VwOOTQ7bS-taDS50zm1020759Q2qCsMDBHMFexh8yNC6xjyNmrn6LzUl8aJQoS9MAp9RNPPHVX6wsrpkt3kXtAwzfz5QjO4K79w1pBZTVU_n5__cW4wYUCgzdpxTyX_tuBMrnqxgQ6OeEh21m0-fhSwyJespNAZc8hOlCqgU8_TmIlH2iBMBTI1rMDJTf10h7zZvCo0PdeY1MIoE55J4KS9dxTYltJjQA_MbinbyMztrS-OcqNQQ')" }}
+          style={{ backgroundImage: `url(${centroFacade})` }}
         ></div>
         <div className="absolute inset-0 bg-surface/60 mix-blend-multiply"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
@@ -73,8 +79,8 @@ export function Centro() {
           <div className="space-y-24">
             {/* Recepción & Lumen Living */}
             <Reveal className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="order-2 lg:order-1 relative rounded-2xl overflow-hidden aspect-[4/3] bg-surface-container border border-outline-variant/30">
-                 <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1000&auto=format&fit=crop" alt="Recepción" className="absolute inset-0 w-full h-full object-cover opacity-80" />
+              <div className="order-2 lg:order-1 relative rounded-2xl overflow-hidden aspect-[4/5] bg-surface-container border border-outline-variant/30">
+                 <img src={centroReception} alt="Recepción" className="absolute inset-0 w-full h-full object-cover opacity-90" />
               </div>
               <div className="order-1 lg:order-2">
                 <h3 className="font-headline-sm text-headline-sm text-on-background mb-4">Recepción y Lumen Living</h3>
@@ -92,15 +98,15 @@ export function Centro() {
                   Nuestra sala icónica. Seis reformers premium dispuestos con un lujo espacial excepcional. Grandes espejos verticales arqueados, cortinas de techo a suelo para filtrar la luz natural e islas acústicas en un techo foseado. Aquí el movimiento fluye al ritmo de una iluminación que baja su intensidad para tu relajación final.
                 </p>
               </div>
-              <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-surface-container border border-outline-variant/30">
-                <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1000&auto=format&fit=crop" alt="Sala de Pilates" className="absolute inset-0 w-full h-full object-cover opacity-80 grayscale-[0.2]" />
+              <div className="relative rounded-2xl overflow-hidden aspect-[4/5] bg-surface-container border border-outline-variant/30">
+                <img src={centroPilates} alt="Sala de Pilates" className="absolute inset-0 w-full h-full object-cover opacity-90" />
               </div>
             </Reveal>
 
             {/* Sala de Fuerza */}
             <Reveal className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="order-2 lg:order-1 relative rounded-2xl overflow-hidden aspect-[4/3] bg-surface-container border border-outline-variant/30">
-                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1000&auto=format&fit=crop" alt="Sala de Fuerza" className="absolute inset-0 w-full h-full object-cover opacity-80 grayscale-[0.3]" />
+              <div className="order-2 lg:order-1 relative rounded-2xl overflow-hidden aspect-[4/5] bg-surface-container border border-outline-variant/30">
+                <img src={centroGym} alt="Sala de Fuerza" className="absolute inset-0 w-full h-full object-cover opacity-90" />
               </div>
               <div className="order-1 lg:order-2">
                 <h3 className="font-headline-sm text-headline-sm text-on-background mb-4">Sala de Fuerza y Funcional: Strong, not aggressive</h3>
@@ -119,14 +125,14 @@ export function Centro() {
                 </p>
               </div>
               <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-surface-container border border-outline-variant/30">
-                <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1000&auto=format&fit=crop" alt="Fisioterapia" className="absolute inset-0 w-full h-full object-cover opacity-80" />
+                <img src={centroPhysio} alt="Fisioterapia" className="absolute inset-0 w-full h-full object-cover opacity-90" />
               </div>
             </Reveal>
 
             {/* Vestuarios */}
             <Reveal className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="order-2 lg:order-1 relative rounded-2xl overflow-hidden aspect-[4/3] bg-surface-container border border-outline-variant/30">
-                 <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=1000&auto=format&fit=crop" alt="Vestuarios Boutique" className="absolute inset-0 w-full h-full object-cover opacity-80" />
+                 <img src={centroVestuario} alt="Vestuarios Boutique" className="absolute inset-0 w-full h-full object-cover opacity-90" />
               </div>
               <div className="order-1 lg:order-2">
                 <h3 className="font-headline-sm text-headline-sm text-on-background mb-4">Vestuarios Boutique</h3>
