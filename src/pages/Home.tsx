@@ -3,11 +3,14 @@ import { Testimonials } from '../components/Testimonials';
 import { PilatesHighlight } from '../components/PilatesHighlight';
 import { Location } from '../components/Location';
 import { Reveal } from '../components/Reveal';
-import lumenBotella from '../assets/images/lumen_botella_termica.png';
 import heroHome from '../assets/images/hero_home.png';
-import lumenTote from '../assets/images/lumen_tote_bag.png';
-import lumenEsterilla from '../assets/images/lumen_esterilla.png';
-import lumenCamiseta from '../assets/images/lumen_camiseta.png';
+import merchBotella from '../assets/images/merch_botella.png';
+import merchToalla from '../assets/images/merch_toalla.png';
+import merchCamiseta from '../assets/images/merch_camiseta.png';
+import merchTotebag from '../assets/images/merch_totebag.png';
+import merchCuaderno from '../assets/images/merch_cuaderno.png';
+import merchEsterilla from '../assets/images/merch_esterilla.png';
+import merchMochila from '../assets/images/merch_mochila.png';
 
 export function Home() {
   const { navigate } = useRouter();
@@ -159,38 +162,27 @@ export function Home() {
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Item 1: Botella Térmica */}
-            <div className="group cursor-pointer">
-              <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-[#D2C5B6] mb-4 shadow-sm border border-outline-variant/30 flex items-center justify-center">
-                <img src={lumenBotella} alt="Botella Térmica Lumen" className="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-700" />
+            {[
+              { id: 'botella', name: 'Botella Térmica Lumen', desc: 'Verde oliva mate · 500ml', img: merchBotella },
+              { id: 'toalla', name: 'Toalla Lumen', desc: 'Algodón suave · Bordado', img: merchToalla },
+              { id: 'camiseta', name: 'Camiseta Essential', desc: 'Algodón orgánico · Corte relajado', img: merchCamiseta },
+              { id: 'totebag', name: 'Canvas Tote Bag', desc: 'Lino natural · Serigrafía', img: merchTotebag },
+              { id: 'cuaderno', name: 'Cuaderno Lumen', desc: 'Papel reciclado · Tapa blanda', img: merchCuaderno },
+              { id: 'esterilla', name: 'Esterilla Premium', desc: 'Verde oliva · Antideslizante', img: merchEsterilla },
+              { id: 'mochila', name: 'Mochila Lumen', desc: 'Diseño minimalista · Multiusos', img: merchMochila }
+            ].map((item) => (
+              <div key={item.id} className="group cursor-pointer">
+                <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-[#D2C5B6] mb-4 shadow-sm border border-outline-variant/30 flex items-center justify-center">
+                  <img 
+                    src={item.img} 
+                    alt={item.name} 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                  />
+                </div>
+                <h4 className="font-headline-sm text-lg text-on-background mb-1">{item.name}</h4>
+                <p className="font-body-md text-sm text-on-surface-variant">{item.desc}</p>
               </div>
-              <h4 className="font-headline-sm text-lg text-on-background mb-1">Botella Térmica Lumen</h4>
-              <p className="font-body-md text-sm text-on-surface-variant">Verde oliva mate · 500ml</p>
-            </div>
-            {/* Item 2: Camiseta */}
-            <div className="group cursor-pointer">
-              <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-[#e8e2d6] mb-4 shadow-sm border border-outline-variant/30 flex items-center justify-center">
-                <img src={lumenCamiseta} alt="Camiseta Essential Lumen" className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-700 mix-blend-multiply" />
-              </div>
-              <h4 className="font-headline-sm text-lg text-on-background mb-1">Camiseta Essential</h4>
-              <p className="font-body-md text-sm text-on-surface-variant">Algodón orgánico · Corte relajado</p>
-            </div>
-            {/* Item 3: Tote Bag */}
-            <div className="group cursor-pointer">
-              <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-[#e8e2d6] mb-4 shadow-sm border border-outline-variant/30 flex items-center justify-center">
-                <img src={lumenTote} alt="Tote Bag Lumen" className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-700 mix-blend-multiply" />
-              </div>
-              <h4 className="font-headline-sm text-lg text-on-background mb-1">Canvas Tote Bag</h4>
-              <p className="font-body-md text-sm text-on-surface-variant">Lino natural · Serigrafía Lumen</p>
-            </div>
-            {/* Item 4: Esterilla */}
-            <div className="group cursor-pointer">
-              <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-[#e8e2d6] mb-4 shadow-sm border border-outline-variant/30 flex items-center justify-center">
-                <img src={lumenEsterilla} alt="Esterilla Lumen" className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-700 mix-blend-multiply" />
-              </div>
-              <h4 className="font-headline-sm text-lg text-on-background mb-1">Esterilla Reformer</h4>
-              <p className="font-body-md text-sm text-on-surface-variant">Verde oliva · Goma premium</p>
-            </div>
+            ))}
           </div>
         </Reveal>
       </section>
