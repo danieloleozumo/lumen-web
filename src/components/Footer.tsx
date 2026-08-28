@@ -1,6 +1,8 @@
 import { Logo } from './Logo';
+import { useRouter } from '../router';
 
 export function Footer() {
+  const { navigate } = useRouter();
   return (
     <footer className="bg-surface-container-low w-full py-16 md:py-section-gap border-t border-outline-variant/50 pb-32 md:pb-section-gap">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
@@ -42,12 +44,12 @@ export function Footer() {
         {/* Centro Links */}
         <div className="lg:col-span-2">
           <h4 className="font-label-caps text-label-caps text-on-background mb-6">LUMEN</h4>
-          <ul className="space-y-4 font-body-md text-body-md">
-            <li><a className="text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#">El Método</a></li>
-            <li><a className="text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#">Instalaciones</a></li>
-            <li><a className="text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#">Nuestro Equipo</a></li>
-            <li><a className="text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#">Tarifas y Bonos</a></li>
-            <li><a className="text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#">Preguntas Frecuentes</a></li>
+          <ul className="space-y-4 font-body-md text-body-md flex flex-col items-start">
+            <li><button onClick={() => navigate('entrenamientos')} className="text-on-surface-variant hover:text-primary transition-colors cursor-pointer text-left">El Método</button></li>
+            <li><button onClick={() => navigate('centro')} className="text-on-surface-variant hover:text-primary transition-colors cursor-pointer text-left">El Centro</button></li>
+            <li><button onClick={() => navigate('equipo')} className="text-on-surface-variant hover:text-primary transition-colors cursor-pointer text-left">Nuestro Equipo</button></li>
+            <li><button onClick={() => navigate('contacto')} className="text-on-surface-variant hover:text-primary transition-colors cursor-pointer text-left">Contacto</button></li>
+            <li><button onClick={() => navigate('blog')} className="text-on-surface-variant hover:text-primary transition-colors cursor-pointer text-left">Blog</button></li>
           </ul>
         </div>
 

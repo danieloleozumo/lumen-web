@@ -85,6 +85,12 @@ export function Navigation() {
             >
               Equipo
             </button>
+            <button 
+              onClick={() => navigate('contacto')}
+              className={`${currentRoute === 'contacto' ? 'text-primary font-bold border-b-2 border-primary pb-1' : 'text-on-surface-variant font-medium hover:text-primary'} transition-colors duration-300`}
+            >
+              Contacto
+            </button>
           </nav>
           
           <div className="hidden md:flex items-center gap-4">
@@ -116,6 +122,7 @@ export function Navigation() {
               { route: 'centro', label: 'El Centro' },
               { route: 'equipo', label: 'Equipo' },
               { route: 'blog', label: 'Blog' },
+              { route: 'contacto', label: 'Contacto' },
             ].map((item, idx) => (
               <button 
                 key={idx}
