@@ -3,7 +3,7 @@ import { Testimonials } from '../components/Testimonials';
 import { PilatesHighlight } from '../components/PilatesHighlight';
 import { Location } from '../components/Location';
 import { Reveal } from '../components/Reveal';
-import heroHome from '../assets/images/hero_home.png';
+import heroHomeFitness from '../assets/images/hero_home_fitness.jpg';
 import centroFacade from '../assets/images/centro_facade.png';
 import merchBotella from '../assets/images/merch_botella.png';
 import merchToalla from '../assets/images/merch_toalla.png';
@@ -22,8 +22,8 @@ export function Home() {
       <section className="relative min-h-[60vh] md:min-h-[80vh] lg:min-h-[921px] flex items-center justify-center px-margin-mobile md:px-margin-desktop overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src={centroFacade}
-            alt="Fachada Lumen"
+            src={heroHomeFitness}
+            alt="Entrenamiento y Pilates en Lumen"
             className="w-full h-full object-cover object-center scale-[1.02]"
           />
           {/* Overlay principal - fondo beige sobre toda la imagen para matar el contraste */}
