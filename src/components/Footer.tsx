@@ -73,7 +73,7 @@ export function Footer() {
             </li>
             <li className="flex items-center gap-4">
               <span className="material-symbols-outlined text-primary shrink-0">mail</span>
-              <a className="hover:text-primary transition-colors cursor-pointer" href="mailto:hola@lumensalud.com">hola@lumensalud.com</a>
+              <a className="hover:text-primary transition-colors cursor-pointer" href="mailto:hola@lumenmovimiento.es">hola@lumenmovimiento.es</a>
             </li>
             <li className="flex items-center gap-4">
               <span className="material-symbols-outlined text-primary shrink-0">call</span>
