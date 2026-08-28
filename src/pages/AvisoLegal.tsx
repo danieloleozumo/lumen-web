@@ -23,7 +23,7 @@ export function AvisoLegal() {
           <Reveal className="prose prose-stone max-w-none space-y-8 text-on-surface-variant leading-relaxed font-body-md text-sm md:text-base">
             
             <p className="font-semibold text-on-background text-lg">
-              Este sitio web es propiedad, y está bajo responsabilidad de, Lumen Bienestar y Movimiento, con CIF B23528227, con domicilio en C/ Camino Ancho S/N, CP: 23100, Mancha Real (Jaén), correo electrónico info@oleozumo.com, inscrita en el Registro Mercantil de JAÉN: T 338, F 194, S 8, H J 12573, I/A 1, aunque en adelante nos llamaremos Lumen Bienestar y Movimiento o simplemente “nosotros”, y a usted, que es el usuario de esta web le llamaremos “usuario”, usted o simplemente “tú”.
+              Este sitio web es propiedad, y está bajo responsabilidad de, Lumen Bienestar y Movimiento, con correo electrónico info@oleozumo.com, inscrita en el Registro Mercantil de JAÉN: T 338, F 194, S 8, H J 12573, I/A 1, aunque en adelante nos llamaremos Lumen Bienestar y Movimiento o simplemente “nosotros”, y a usted, que es el usuario de esta web le llamaremos “usuario”, usted o simplemente “tú”.
             </p>
 
             <p>

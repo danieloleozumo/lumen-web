@@ -23,7 +23,7 @@ export function Privacidad() {
           <Reveal className="prose prose-stone max-w-none space-y-8 text-on-surface-variant leading-relaxed font-body-md text-sm md:text-base">
             
             <p className="font-semibold text-on-background text-lg">
-              Este sitio web es propiedad, y está bajo responsabilidad de, Lumen Bienestar y Movimiento, con CIF B23528227, con domicilio en C/ Camino Ancho S/N, CP: 23100, Mancha Real (Jaén), correo electrónico info@oleozumo.com, inscrita en el Registro Mercantil de JAÉN: T 338, F 194, S 8, H J 12573, I/A 1, aunque en adelante nos llamaremos Lumen Bienestar y Movimiento o simplemente “nosotros”, y a usted, que es el usuario de esta web le llamaremos “usuario”, usted o simplemente “tú”.
+              Este sitio web es propiedad, y está bajo responsabilidad de, Lumen Bienestar y Movimiento, con correo electrónico info@oleozumo.com, inscrita en el Registro Mercantil de JAÉN: T 338, F 194, S 8, H J 12573, I/A 1, aunque en adelante nos llamaremos Lumen Bienestar y Movimiento o simplemente “nosotros”, y a usted, que es el usuario de esta web le llamaremos “usuario”, usted o simplemente “tú”.
             </p>
 
             <p>
@@ -110,16 +110,9 @@ export function Privacidad() {
                 Todos aquellos usuarios cuyos datos personales sean objeto de tratamiento, podrán ejercitar gratuitamente los derechos de acceso, rectificación, supresión de sus datos, oposición al tratamiento, y limitación al tratamiento, así como portabilidad (en los casos que sea posible atendiendo a la legislación vigente) y de información en las decisiones individuales automatizadas (caso de que se realicen).
               </p>
               <p className="mb-4">
-                Estos derechos podrán ser ejercitados a través de una de las siguientes vías:
+                Estos derechos podrán ser ejercitados a través de la siguiente vía:
               </p>
               <ul className="list-disc pl-6 space-y-4">
-                <li>
-                  <strong>Por escrito</strong>, enviando su solicitud, junto con copia de la documentación acreditativa de su identidad, a la siguiente dirección:
-                  <div className="mt-2 pl-4 border-l-2 border-primary font-mono text-xs md:text-sm bg-surface-container-low p-3 rounded-lg">
-                    Lumen Bienestar y Movimiento – Atención de Datos Personales<br />
-                    C/ Camino Ancho S/N, CP: 23100. Mancha Real (Jaén) – España.
-                  </div>
-                </li>
                 <li>
                   <strong>A través de correo electrónico</strong> a la dirección <a href="mailto:info@oleozumo.com" className="text-primary hover:underline">info@oleozumo.com</a> firmando digitalmente su solicitud mediante el Documento Nacional de Identidad (DNI) electrónico español, o adjuntando copia de su DNI, no siendo necesaria en este caso más acreditación por parte de la persona solicitante.
                 </li>
