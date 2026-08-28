@@ -14,6 +14,7 @@ import { Empieza } from './pages/Empieza';
 import { Blog } from './pages/Blog';
 import { Contacto } from './pages/Contacto';
 import { AvisoLegal } from './pages/AvisoLegal';
+import { Cookies } from './pages/Cookies';
 import { motion, AnimatePresence } from 'motion/react';
 
 function AppContent() {
@@ -40,6 +41,7 @@ function AppContent() {
             {currentRoute === 'blog' && <Blog />}
             {currentRoute === 'contacto' && <Contacto />}
             {currentRoute === 'aviso-legal' && <AvisoLegal />}
+            {currentRoute === 'cookies' && <Cookies />}
           </motion.div>
         </AnimatePresence>
       </main>

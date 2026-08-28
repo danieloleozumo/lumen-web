@@ -90,8 +90,9 @@ export function Footer() {
         <p className="font-label-caps text-label-caps text-on-surface-variant opacity-80">
           © {new Date().getFullYear()} Lumen Bienestar y Movimiento. Todos los derechos reservados.
         </p>
-        <div className="flex gap-6 font-label-caps text-label-caps text-on-surface-variant">
+        <div className="flex gap-6 font-label-caps text-label-caps text-on-surface-variant flex-wrap justify-center">
           <button onClick={() => navigate('aviso-legal')} className="hover:text-primary transition-colors cursor-pointer">Aviso Legal</button>
+          <button onClick={() => navigate('cookies')} className="hover:text-primary transition-colors cursor-pointer">Cookies</button>
           <a className="hover:text-primary transition-colors cursor-pointer" href="#">Privacidad</a>
         </div>
       </div>
