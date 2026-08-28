@@ -91,7 +91,7 @@ export function Footer() {
           © {new Date().getFullYear()} Lumen Bienestar y Movimiento. Todos los derechos reservados.
         </p>
         <div className="flex gap-6 font-label-caps text-label-caps text-on-surface-variant">
-          <a className="hover:text-primary transition-colors cursor-pointer" href="#">Aviso Legal</a>
+          <button onClick={() => navigate('aviso-legal')} className="hover:text-primary transition-colors cursor-pointer">Aviso Legal</button>
           <a className="hover:text-primary transition-colors cursor-pointer" href="#">Privacidad</a>
         </div>
       </div>

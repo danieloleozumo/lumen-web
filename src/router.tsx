@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, ReactNode } from 'react';
 
-type Route = 'home' | 'entrenamientos' | 'centro' | 'equipo' | 'empieza' | 'blog' | 'contacto';
+type Route = 'home' | 'entrenamientos' | 'centro' | 'equipo' | 'empieza' | 'blog' | 'contacto' | 'aviso-legal';
 
 interface RouterContextType {
   currentRoute: Route;

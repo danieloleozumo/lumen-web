@@ -13,6 +13,7 @@ import { Equipo } from './pages/Equipo';
 import { Empieza } from './pages/Empieza';
 import { Blog } from './pages/Blog';
 import { Contacto } from './pages/Contacto';
+import { AvisoLegal } from './pages/AvisoLegal';
 import { motion, AnimatePresence } from 'motion/react';
 
 function AppContent() {
@@ -38,6 +39,7 @@ function AppContent() {
             {currentRoute === 'empieza' && <Empieza />}
             {currentRoute === 'blog' && <Blog />}
             {currentRoute === 'contacto' && <Contacto />}
+            {currentRoute === 'aviso-legal' && <AvisoLegal />}
           </motion.div>
         </AnimatePresence>
       </main>
