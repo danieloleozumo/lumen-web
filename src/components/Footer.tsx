@@ -93,7 +93,7 @@ export function Footer() {
         <div className="flex gap-6 font-label-caps text-label-caps text-on-surface-variant flex-wrap justify-center">
           <button onClick={() => navigate('aviso-legal')} className="hover:text-primary transition-colors cursor-pointer">Aviso Legal</button>
           <button onClick={() => navigate('cookies')} className="hover:text-primary transition-colors cursor-pointer">Cookies</button>
-          <a className="hover:text-primary transition-colors cursor-pointer" href="#">Privacidad</a>
+          <button onClick={() => navigate('privacidad')} className="hover:text-primary transition-colors cursor-pointer">Privacidad</button>
         </div>
       </div>
     </footer>

@@ -15,6 +15,7 @@ import { Blog } from './pages/Blog';
 import { Contacto } from './pages/Contacto';
 import { AvisoLegal } from './pages/AvisoLegal';
 import { Cookies } from './pages/Cookies';
+import { Privacidad } from './pages/Privacidad';
 import { motion, AnimatePresence } from 'motion/react';
 
 function AppContent() {
@@ -42,6 +43,7 @@ function AppContent() {
             {currentRoute === 'contacto' && <Contacto />}
             {currentRoute === 'aviso-legal' && <AvisoLegal />}
             {currentRoute === 'cookies' && <Cookies />}
+            {currentRoute === 'privacidad' && <Privacidad />}
           </motion.div>
         </AnimatePresence>
       </main>
