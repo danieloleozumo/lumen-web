@@ -12,6 +12,7 @@ node_modules/
 jspm_packages/
 
 # Compiler outputs
+dist/
 dist-ssr/
 *.tsbuildinfo
 
