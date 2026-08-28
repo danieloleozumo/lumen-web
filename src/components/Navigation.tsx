@@ -15,7 +15,18 @@ export function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleNavClick = (route: string) => {
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMenuOpen]);
+
+  const handleNavClick = (route: any) => {
     setIsMenuOpen(false);
     navigate(route);
   };
@@ -86,7 +97,7 @@ export function Navigation() {
           </div>
           
           <button 
-            className="md:hidden text-primary p-2 z-50 relative"
+            className="md:hidden text-primary p-2 z-50 relative active:scale-90 transition-transform duration-150"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <span className="material-symbols-outlined text-3xl">
@@ -96,43 +107,32 @@ export function Navigation() {
         </div>
 
         {/* Mobile Menu Overlay */}
-        <div className={`md:hidden fixed inset-0 bg-surface z-40 transition-transform duration-300 flex flex-col pt-32 px-margin-mobile ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-          <nav className="flex flex-col gap-6 font-headline-md text-headline-md text-on-surface">
-            <button 
-              onClick={() => handleNavClick('home')}
-              className={`text-left ${currentRoute === 'home' ? 'text-primary font-bold' : ''}`}
-            >
-              Inicio
-            </button>
-            <button 
-              onClick={() => handleNavClick('entrenamientos')}
-              className={`text-left ${currentRoute === 'entrenamientos' ? 'text-primary font-bold' : ''}`}
-            >
-              El Método & Programas
-            </button>
-            <button 
-              onClick={() => handleNavClick('centro')}
-              className={`text-left ${currentRoute === 'centro' ? 'text-primary font-bold' : ''}`}
-            >
-              El Centro
-            </button>
-            <button 
-              onClick={() => handleNavClick('equipo')}
-              className={`text-left ${currentRoute === 'equipo' ? 'text-primary font-bold' : ''}`}
-            >
-              Equipo
-            </button>
-            <button 
-              onClick={() => handleNavClick('blog')}
-              className={`text-left ${currentRoute === 'blog' ? 'text-primary font-bold' : ''}`}
-            >
-              Blog
-            </button>
+        <div className={`md:hidden fixed inset-0 bg-surface z-40 transition-transform duration-300 flex flex-col pt-28 px-margin-mobile ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+          <nav className="flex flex-col font-label-caps text-label-caps text-on-surface text-base">
+            {[
+              { route: 'home', label: 'Inicio' },
+              { route: 'entrenamientos', label: 'El Método' },
+              { route: 'entrenamientos', label: 'Programas' },
+              { route: 'centro', label: 'El Centro' },
+              { route: 'equipo', label: 'Equipo' },
+              { route: 'blog', label: 'Blog' },
+            ].map((item, idx) => (
+              <button 
+                key={idx}
+                onClick={() => handleNavClick(item.route as any)}
+                className={`text-left py-4.5 border-b border-outline-variant/15 w-full flex justify-between items-center transition-colors active:bg-surface-container-low px-2 rounded-lg -mx-2 ${
+                  currentRoute === item.route ? 'text-primary font-bold' : 'text-on-surface-variant font-medium'
+                }`}
+              >
+                <span>{item.label}</span>
+                <span className="material-symbols-outlined text-sm opacity-60">arrow_forward_ios</span>
+              </button>
+            ))}
           </nav>
-          <div className="mt-12">
+          <div className="mt-10">
             <button 
               onClick={() => handleNavClick('empieza')}
-              className="w-full font-label-caps text-label-caps bg-primary text-on-primary px-6 py-4 rounded-full shadow-md"
+              className="w-full font-label-caps text-label-caps bg-primary text-on-primary px-6 py-4 rounded-full shadow-md active:scale-[0.98] transition-transform duration-150 cursor-pointer"
             >
               UNIRSE AL CÍRCULO FUNDADOR
             </button>
@@ -141,13 +141,13 @@ export function Navigation() {
       </header>
 
       {/* Mobile Bottom Nav */}
-      <nav className={`fixed bottom-0 left-0 w-full z-50 flex justify-center items-center px-margin-mobile py-4 md:hidden bg-surface/95 backdrop-blur-lg rounded-t-[2rem] border-t border-outline-variant/20 shadow-sm transition-transform duration-300 ${isMenuOpen ? 'translate-y-full' : 'translate-y-0'}`}>
+      <nav className={`fixed bottom-0 left-0 w-full z-50 flex justify-center items-center px-margin-mobile pt-4 pb-[calc(1rem+env(safe-area-inset-bottom,0px))] md:hidden bg-surface/95 backdrop-blur-lg rounded-t-[2rem] border-t border-outline-variant/20 shadow-sm transition-transform duration-300 ${isMenuOpen ? 'translate-y-full' : 'translate-y-0'}`}>
         <button 
           onClick={() => handleNavClick('empieza')}
-          className="flex flex-col items-center justify-center bg-primary text-on-primary rounded-full px-12 py-3 scale-95 duration-150 shadow-md w-full max-w-[250px]"
+          className="flex flex-col items-center justify-center bg-primary text-on-primary rounded-full px-12 py-3.5 active:scale-[0.96] transition-transform duration-100 shadow-md w-full max-w-[280px] cursor-pointer"
         >
-          <span className="material-symbols-outlined fill-icon mb-1">bolt</span>
-          <span className="font-label-caps text-label-caps text-xs">CÍRCULO FUNDADOR</span>
+          <span className="material-symbols-outlined fill-icon mb-0.5">bolt</span>
+          <span className="font-label-caps text-label-caps text-xs tracking-wider">CÍRCULO FUNDADOR</span>
         </button>
       </nav>
     </>

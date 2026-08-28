@@ -12,6 +12,7 @@ import { Centro } from './pages/Centro';
 import { Equipo } from './pages/Equipo';
 import { Empieza } from './pages/Empieza';
 import { Blog } from './pages/Blog';
+import { motion, AnimatePresence } from 'motion/react';
 
 function AppContent() {
   const { currentRoute } = useRouter();
@@ -20,12 +21,24 @@ function AppContent() {
     <div className="min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">
       <Navigation />
       
-      {currentRoute === 'home' && <Home />}
-      {currentRoute === 'entrenamientos' && <Entrenamientos />}
-      {currentRoute === 'centro' && <Centro />}
-      {currentRoute === 'equipo' && <Equipo />}
-      {currentRoute === 'empieza' && <Empieza />}
-      {currentRoute === 'blog' && <Blog />}
+      <main className="flex-grow">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentRoute}
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -15 }}
+            transition={{ duration: 0.35, ease: [0.21, 0.47, 0.32, 0.98] }}
+          >
+            {currentRoute === 'home' && <Home />}
+            {currentRoute === 'entrenamientos' && <Entrenamientos />}
+            {currentRoute === 'centro' && <Centro />}
+            {currentRoute === 'equipo' && <Equipo />}
+            {currentRoute === 'empieza' && <Empieza />}
+            {currentRoute === 'blog' && <Blog />}
+          </motion.div>
+        </AnimatePresence>
+      </main>
       
       <Footer />
     </div>
