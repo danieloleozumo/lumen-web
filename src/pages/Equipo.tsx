@@ -5,6 +5,7 @@ import equipoFisioterapia from '../assets/images/equipo_fisioterapia.jpg';
 import equipoNutricion from '../assets/images/equipo_nutricion.jpg';
 import equipoEntrenamientoSuelo from '../assets/images/equipo_entrenamiento_suelo.jpg';
 import equipoEntrenamientoReformer from '../assets/images/equipo_entrenamiento_reformer.jpg';
+import equipoEntrenamientoFuncional from '../assets/images/equipo_entrenamiento_funcional_1.jpg';
 
 export function Equipo() {
   const { navigate } = useRouter();
@@ -29,10 +30,16 @@ export function Equipo() {
       description: 'Clases guiadas en reformers premium, diseñadas para mejorar la fuerza del core, la flexibilidad y la alineación corporal mediante la precisión del método Pilates.',
     },
     {
-      title: 'Entrenamiento Funcional y Suelo',
-      specialty: 'Fuerza, Vitalidad y Longevidad',
+      title: 'Pilates Suelo y Yoga',
+      specialty: 'Flexibilidad y Control Corporal',
       image: equipoEntrenamientoSuelo,
-      description: 'Sesiones personalizadas o en grupos reducidos de entrenamiento funcional y Pilates suelo. Adaptamos cada sesión para mejorar tu capacidad física y vitalidad diaria.',
+      description: 'Sesiones enfocadas en el control de la respiración, la flexibilidad profunda, la higiene postural y el fortalecimiento muscular a través del trabajo en colchoneta.',
+    },
+    {
+      title: 'Entrenamiento Funcional y Fuerza',
+      specialty: 'Fuerza, Vitalidad y Longevidad',
+      image: equipoEntrenamientoFuncional,
+      description: 'Sesiones personalizadas o en grupos muy reducidos diseñadas para mejorar tu capacidad física, masa muscular, resistencia y vitalidad de forma segura y adaptada.',
     },
     {
       title: 'Dietética y Nutrición',
