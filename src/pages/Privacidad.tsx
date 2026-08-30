@@ -23,7 +23,7 @@ export function Privacidad() {
           <Reveal className="prose prose-stone max-w-none space-y-8 text-on-surface-variant leading-relaxed font-body-md text-sm md:text-base">
             
             <p className="font-semibold text-on-background text-lg">
-              Este sitio web es propiedad, y está bajo responsabilidad de, Lumen Bienestar y Movimiento, con correo electrónico info@oleozumo.com, inscrita en el Registro Mercantil de JAÉN: T 338, F 194, S 8, H J 12573, I/A 1, aunque en adelante nos llamaremos Lumen Bienestar y Movimiento o simplemente “nosotros”, y a usted, que es el usuario de esta web le llamaremos “usuario”, usted o simplemente “tú”.
+              Este sitio web es propiedad, y está bajo responsabilidad de, Lumen Bienestar y Movimiento, con correo electrónico hola@lumenmovimiento.es, inscrita en el Registro Mercantil de JAÉN: T 338, F 194, S 8, H J 12573, I/A 1, aunque en adelante nos llamaremos Lumen Bienestar y Movimiento o simplemente “nosotros”, y a usted, que es el usuario de esta web le llamaremos “usuario”, usted o simplemente “tú”.
             </p>
 
             <p>
@@ -114,7 +114,7 @@ export function Privacidad() {
               </p>
               <ul className="list-disc pl-6 space-y-4">
                 <li>
-                  <strong>A través de correo electrónico</strong> a la dirección <a href="mailto:info@oleozumo.com" className="text-primary hover:underline">info@oleozumo.com</a> firmando digitalmente su solicitud mediante el Documento Nacional de Identidad (DNI) electrónico español, o adjuntando copia de su DNI, no siendo necesaria en este caso más acreditación por parte de la persona solicitante.
+                  <strong>A través de correo electrónico</strong> a la dirección <a href="mailto:hola@lumenmovimiento.es" className="text-primary hover:underline">hola@lumenmovimiento.es</a> firmando digitalmente su solicitud mediante el Documento Nacional de Identidad (DNI) electrónico español, o adjuntando copia de su DNI, no siendo necesaria en este caso más acreditación por parte de la persona solicitante.
                 </li>
               </ul>
             </div>

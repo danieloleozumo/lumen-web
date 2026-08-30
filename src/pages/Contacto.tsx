@@ -15,7 +15,17 @@ export function Contacto() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // En una aplicación real, aquí se enviarían los datos a un backend
+    
+    const asunto = `Contacto Web Lumen - Interés: ${formData.interes}`;
+    const cuerpo = `Datos del Formulario de Contacto:\n\n` +
+      `- Nombre: ${formData.nombre}\n` +
+      `- Teléfono: ${formData.telefono}\n` +
+      `- Correo de cliente: ${formData.email}\n` +
+      `- Interés indicado: ${formData.interes}\n\n` +
+      `Mensaje:\n${formData.mensaje}`;
+
+    const mailtoUrl = `mailto:hola@lumenmovimiento.es?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
+    window.location.href = mailtoUrl;
     setSubmitted(true);
   };
 

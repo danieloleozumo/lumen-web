@@ -30,6 +30,134 @@ export function Entrenamientos() {
         </Reveal>
       </section>
 
+      {/* El Método Lumen */}
+      <section className="py-16 md:py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-lowest border-y border-outline-variant/30">
+        <Reveal className="max-w-container-max mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="font-label-caps text-label-caps tracking-widest text-secondary mb-4 block">NUESTRA METODOLOGÍA</span>
+            <h2 className="font-headline-md text-headline-md text-on-background mb-6">
+              El Método Lumen
+            </h2>
+            <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+              En Lumen nos alejamos de las rutinas genéricas de gimnasio y de los tratamientos aislados. Hemos creado un ecosistema integrado donde la fisioterapia especializada y el entrenamiento científico se unen bajo una misma dirección.
+            </p>
+          </div>
+
+          {/* El Recorrido Diferencial (4 Pasos) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20 text-left">
+            {/* Paso 1: Conocer */}
+            <div className="bg-surface-container p-8 rounded-2xl border border-outline-variant/30 flex flex-col justify-between hover:border-primary-container transition-colors shadow-sm min-h-[320px]">
+              <div>
+                <span className="font-headline-lg text-primary/30 block mb-4 text-5xl font-extralight font-primary">01</span>
+                <h3 className="font-headline-sm text-headline-sm text-on-background mb-3">Conocer</h3>
+                <p className="font-body-md text-body-md text-on-surface-variant">
+                  Todo comienza con una <strong>Valoración Inicial Integral</strong> de 45 a 60 minutos. Analizamos tu historial de salud, hábitos, suelo pélvico, movilidad y fuerza.
+                </p>
+              </div>
+              <div className="mt-6 text-[10px] text-primary font-label-caps tracking-wider font-semibold">Diagnosticar antes de entrenar</div>
+            </div>
+
+            {/* Paso 2: Orientar */}
+            <div className="bg-surface-container p-8 rounded-2xl border border-outline-variant/30 flex flex-col justify-between hover:border-primary-container transition-colors shadow-sm min-h-[320px]">
+              <div>
+                <span className="font-headline-lg text-primary/30 block mb-4 text-5xl font-extralight font-primary">02</span>
+                <h3 className="font-headline-sm text-headline-sm text-on-background mb-3">Orientar</h3>
+                <p className="font-body-md text-body-md text-on-surface-variant">
+                  Te prescribimos un <strong>Programa Personalizado</strong> adaptado a tus necesidades específicas (Recover, Strength o Longevity) combinando ejercicio, clínica y tecnología.
+                </p>
+              </div>
+              <div className="mt-6 text-[10px] text-primary font-label-caps tracking-wider font-semibold">Prescripción, no improvisación</div>
+            </div>
+
+            {/* Paso 3: Entrenar */}
+            <div className="bg-surface-container p-8 rounded-2xl border border-outline-variant/30 flex flex-col justify-between hover:border-primary-container transition-colors shadow-sm min-h-[320px]">
+              <div>
+                <span className="font-headline-lg text-primary/30 block mb-4 text-5xl font-extralight font-primary">03</span>
+                <h3 className="font-headline-sm text-headline-sm text-on-background mb-3">Entrenar</h3>
+                <p className="font-body-md text-body-md text-on-surface-variant">
+                  Entrenas en grupos de máximo 6 a 10 personas (<strong>Círculos Lumen</strong>), guiada siempre por graduados en CAFYD y fisioterapeutas en un entorno de calma y privacidad.
+                </p>
+              </div>
+              <div className="mt-6 text-[10px] text-primary font-label-caps tracking-wider font-semibold">Supervisión constante</div>
+            </div>
+
+            {/* Paso 4: Progresar */}
+            <div className="bg-surface-container p-8 rounded-2xl border border-outline-variant/30 flex flex-col justify-between hover:border-primary-container transition-colors shadow-sm min-h-[320px]">
+              <div>
+                <span className="font-headline-lg text-primary/30 block mb-4 text-5xl font-extralight font-primary">04</span>
+                <h3 className="font-headline-sm text-headline-sm text-on-background mb-3">Progresar</h3>
+                <p className="font-body-md text-body-md text-on-surface-variant">
+                  Cada 8-12 semanas realizamos una <strong>Revisión de Resultados</strong>. Volvemos a medir tus indicadores funcionales para mostrarte tu evolución objetiva en datos.
+                </p>
+              </div>
+              <div className="mt-6 text-[10px] text-primary font-label-caps tracking-wider font-semibold">Tu progreso en datos reales</div>
+            </div>
+          </div>
+
+          {/* Bloque de Evolución Objetivable (Simulación Visual de Progreso) */}
+          <div className="bg-background p-8 md:p-12 rounded-3xl border border-outline-variant/30 max-w-4xl mx-auto shadow-sm">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+              <div className="text-left">
+                <h4 className="font-headline-sm text-headline-sm text-on-background mb-4">Verás y sentirás tu progreso en datos reales</h4>
+                <p className="font-body-md text-body-md text-on-surface-variant mb-6">
+                  En los gimnasios tradicionales entrenas sin saber si estás mejorando. En Lumen, medimos tu evolución física y de bienestar. Este es un ejemplo del reporte sencillo que recibirás periódicamente:
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <span className="w-2 h-2 rounded-full bg-primary"></span>
+                    <span className="font-body-md text-body-md text-on-background">Evaluación de fuerza muscular y tono del core.</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="w-2 h-2 rounded-full bg-primary"></span>
+                    <span className="font-body-md text-body-md text-on-background">Evolución de tu rango de movilidad y equilibrio.</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="w-2 h-2 rounded-full bg-primary"></span>
+                    <span className="font-body-md text-body-md text-on-background">Reducción del nivel de molestia o dolor percibido.</span>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Tabla de Demostración */}
+              <div className="bg-surface-container p-6 rounded-2xl border border-outline-variant/30">
+                <span className="font-label-caps text-[10px] tracking-wider text-on-surface-variant/80 block mb-4 text-left">EJEMPLO DE EVOLUCIÓN LUMEN (TRIMESTRAL)</span>
+                <table className="w-full text-left text-sm">
+                  <thead>
+                    <tr className="border-b border-outline-variant/30 text-on-surface-variant/75 font-medium">
+                      <th className="py-2 text-left">Indicador</th>
+                      <th className="py-2 text-center">Inicio</th>
+                      <th className="py-2 text-right">Mes 3</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-on-background font-light">
+                    <tr className="border-b border-outline-variant/10">
+                      <td className="py-3 text-left">Fuerza muscular</td>
+                      <td className="py-3 text-center">100</td>
+                      <td className="py-3 text-right text-primary font-semibold">123 (+23%)</td>
+                    </tr>
+                    <tr className="border-b border-outline-variant/10">
+                      <td className="py-3 text-left">Rango de movilidad</td>
+                      <td className="py-3 text-center">62°</td>
+                      <td className="py-3 text-right text-primary font-semibold">78° (+16°)</td>
+                    </tr>
+                    <tr className="border-b border-outline-variant/10">
+                      <td className="py-3 text-left">Equilibrio / Estabilidad</td>
+                      <td className="py-3 text-center">68%</td>
+                      <td className="py-3 text-right text-primary font-semibold">82% (+14%)</td>
+                    </tr>
+                    <tr>
+                      <td className="py-3 text-left">Nivel de dolor / Molestia</td>
+                      <td className="py-3 text-center">6 / 10</td>
+                      <td className="py-3 text-right text-primary font-semibold">2 / 10</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
       {/* Flagship Programs */}
       <section id="programas" className="py-16 md:py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-low relative">
         <Reveal className="max-w-container-max mx-auto">
