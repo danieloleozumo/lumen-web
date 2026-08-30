@@ -6,6 +6,7 @@ import centroPilates from '../assets/images/centro_pilates.png';
 import centroGym from '../assets/images/centro_gym.png';
 import centroPhysio from '../assets/images/centro_physio.png';
 import centroVestuario from '../assets/images/centro_vestuario.png';
+import centroWellness from '../assets/images/centro_wellness.png';
 
 export function Centro() {
   const { navigate } = useRouter();
@@ -61,7 +62,7 @@ export function Centro() {
                 <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=800&auto=format&fit=crop" alt="Textura y calma" className="w-full h-full object-cover opacity-90" />
               </div>
               <div className="rounded-2xl overflow-hidden aspect-[4/5] mt-8 bg-surface-container-low border border-outline-variant/30">
-                <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=800&auto=format&fit=crop" alt="Materiales nobles" className="w-full h-full object-cover opacity-90" />
+                <img src={centroWellness} alt="Materiales nobles y yoga en Lumen" className="w-full h-full object-cover opacity-90" />
               </div>
             </div>
           </div>
