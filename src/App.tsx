@@ -7,6 +7,7 @@ import { RouterProvider, useRouter } from './router';
 import { Navigation } from './components/Navigation';
 import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
+import { Metodo } from './pages/Metodo';
 import { Entrenamientos } from './pages/Entrenamientos';
 import { Centro } from './pages/Centro';
 import { Equipo } from './pages/Equipo';
@@ -35,6 +36,7 @@ function AppContent() {
             transition={{ duration: 0.35, ease: [0.21, 0.47, 0.32, 0.98] }}
           >
             {currentRoute === 'home' && <Home />}
+            {currentRoute === 'metodo' && <Metodo />}
             {currentRoute === 'entrenamientos' && <Entrenamientos />}
             {currentRoute === 'centro' && <Centro />}
             {currentRoute === 'equipo' && <Equipo />}

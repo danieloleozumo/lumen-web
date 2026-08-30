@@ -56,8 +56,8 @@ export function Navigation() {
               Inicio
             </button>
             <button 
-              onClick={() => navigate('entrenamientos')}
-              className={`${currentRoute === 'entrenamientos' ? 'text-primary font-bold border-b-2 border-primary pb-1' : 'text-on-surface-variant font-medium hover:text-primary'} transition-colors duration-300`}
+              onClick={() => navigate('metodo')}
+              className={`${currentRoute === 'metodo' ? 'text-primary font-bold border-b-2 border-primary pb-1' : 'text-on-surface-variant font-medium hover:text-primary'} transition-colors duration-300`}
             >
               El Método
             </button>
@@ -117,7 +117,7 @@ export function Navigation() {
           <nav className="flex flex-col font-label-caps text-label-caps text-on-surface text-base">
             {[
               { route: 'home', label: 'Inicio' },
-              { route: 'entrenamientos', label: 'El Método' },
+              { route: 'metodo', label: 'El Método' },
               { route: 'entrenamientos', label: 'Programas' },
               { route: 'centro', label: 'El Centro' },
               { route: 'equipo', label: 'Equipo' },
