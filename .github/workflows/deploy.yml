@@ -33,6 +33,3 @@ jobs:
         local-dir: ./dist/
         server-dir: ./
 
-    - name: 🔔 Trigger Hostalia Git Pull & Deploy
-      run: |
-        curl -k -m 15 -X POST "https://plw205.dns-servicio.com:8443/modules/git/public/web-hook.php?uuid=89d01af6-1ecd-d52a-8e02-9e44817ebb36" || true
