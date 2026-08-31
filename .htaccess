@@ -2,6 +2,14 @@
   RewriteEngine On
   RewriteBase /
 
+  # Redirección 301 permanente (SEO friendly) de lumenmovimiento.com a lumenmovimiento.es
+  RewriteCond %{HTTP_HOST} ^(www\.)?lumenmovimiento\.com$ [NC]
+  RewriteRule ^(.*)$ https://lumenmovimiento.es/$1 [R=301,L]
+
+  # Redirección 301 permanente para forzar la versión sin WWW (evita contenido duplicado en SEO)
+  RewriteCond %{HTTP_HOST} ^www\.lumenmovimiento\.es$ [NC]
+  RewriteRule ^(.*)$ https://lumenmovimiento.es/$1 [R=301,L]
+
   # 1. Si la petición pide un archivo real que existe en la carpeta dist, servírselo
   RewriteCond %{DOCUMENT_ROOT}/dist/$1 -f
   RewriteRule ^(.*)$ dist/$1 [L]
