@@ -94,6 +94,7 @@ export function Footer() {
           <button onClick={() => navigate('aviso-legal')} className="hover:text-primary transition-colors cursor-pointer">Aviso Legal</button>
           <button onClick={() => navigate('cookies')} className="hover:text-primary transition-colors cursor-pointer">Cookies</button>
           <button onClick={() => navigate('privacidad')} className="hover:text-primary transition-colors cursor-pointer">Privacidad</button>
+          <button onClick={() => navigate('admin')} className="hover:text-primary transition-colors cursor-pointer opacity-30 hover:opacity-100 text-[10px]">Acceso</button>
         </div>
       </div>
     </footer>
