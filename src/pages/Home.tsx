@@ -17,9 +17,9 @@ export function Home() {
   const { navigate } = useRouter();
   
   return (
-    <main className="pt-20">
+    <main className="pt-24">
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] md:min-h-[80vh] lg:min-h-[921px] flex items-center justify-center px-margin-mobile md:px-margin-desktop overflow-hidden">
+      <section className="relative min-h-[75vh] md:min-h-[80vh] lg:min-h-[921px] flex items-center justify-center pt-12 pb-16 md:pt-0 md:pb-0 px-margin-mobile md:px-margin-desktop overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src={heroHomeFitness}

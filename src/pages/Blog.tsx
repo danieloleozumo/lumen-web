@@ -100,7 +100,7 @@ export function Blog() {
   };
 
   return (
-    <main className="w-full flex-grow pt-20 pb-32 bg-background min-h-screen">
+    <main className="w-full flex-grow pt-24 pb-32 bg-background min-h-screen">
       {/* Header Section */}
       <section className="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-low border-b border-outline-variant/30">
         <div className="max-w-container-max mx-auto text-center">
