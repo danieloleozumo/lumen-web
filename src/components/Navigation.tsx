@@ -111,9 +111,10 @@ export function Navigation() {
             </span>
           </button>
         </div>
+      </header>
 
-        {/* Mobile Menu Overlay */}
-        <div className={`md:hidden fixed inset-0 bg-surface z-40 transition-transform duration-300 flex flex-col pt-28 px-margin-mobile pb-8 overflow-y-auto ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+      {/* Mobile Menu Overlay */}
+      <div className={`md:hidden fixed inset-0 bg-surface z-40 transition-transform duration-300 flex flex-col pt-28 px-margin-mobile pb-8 overflow-y-auto ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
           <nav className="flex flex-col font-label-caps text-label-caps text-on-surface text-base">
             {[
               { route: 'home', label: 'Inicio' },
@@ -145,7 +146,6 @@ export function Navigation() {
             </button>
           </div>
         </div>
-      </header>
 
       {/* Mobile Bottom Nav */}
       <nav className={`fixed bottom-0 left-0 w-full z-50 flex justify-center items-center px-margin-mobile pt-4 pb-[calc(1rem+env(safe-area-inset-bottom,0px))] md:hidden bg-surface/95 backdrop-blur-lg rounded-t-[2rem] border-t border-outline-variant/20 shadow-sm transition-transform duration-300 ${isMenuOpen ? 'translate-y-full' : 'translate-y-0'}`}>
