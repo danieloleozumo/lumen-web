@@ -1,6 +1,8 @@
-import { createContext, useContext, useState, ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 type Route = 'home' | 'entrenamientos' | 'centro' | 'equipo' | 'empieza' | 'blog' | 'contacto' | 'aviso-legal' | 'cookies' | 'privacidad' | 'admin';
+
+const VALID_ROUTES: Route[] = ['home', 'entrenamientos', 'centro', 'equipo', 'empieza', 'blog', 'contacto', 'aviso-legal', 'cookies', 'privacidad', 'admin'];
 
 interface RouterContextType {
   currentRoute: Route;
@@ -9,13 +11,33 @@ interface RouterContextType {
 
 const RouterContext = createContext<RouterContextType | undefined>(undefined);
 
+function getRouteFromPath(path: string): Route {
+  const clean = path.replace(/^\//, '').replace(/\/$/, '') || 'home';
+  return VALID_ROUTES.includes(clean as Route) ? (clean as Route) : 'home';
+}
+
 export function RouterProvider({ children }: { children: ReactNode }) {
-  const [currentRoute, setCurrentRoute] = useState<Route>('home');
+  const [currentRoute, setCurrentRoute] = useState<Route>(() =>
+    getRouteFromPath(window.location.pathname)
+  );
 
   const navigate = (route: Route) => {
     setCurrentRoute(route);
+    const path = route === 'home' ? '/' : `/${route}`;
+    window.history.pushState({ route }, '', path);
     window.scrollTo(0, 0);
   };
+
+  // Escuchar el botón Atrás/Adelante del navegador
+  useEffect(() => {
+    const handlePopState = (e: PopStateEvent) => {
+      const route = e.state?.route ?? getRouteFromPath(window.location.pathname);
+      setCurrentRoute(route);
+      window.scrollTo(0, 0);
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
 
   return (
     <RouterContext.Provider value={{ currentRoute, navigate }}>
@@ -31,3 +53,4 @@ export function useRouter() {
   }
   return context;
 }
+
