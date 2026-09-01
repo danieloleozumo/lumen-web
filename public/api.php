@@ -19,10 +19,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 // CONFIGURACIÓN DE BASE DE DATOS Y ADMINISTRACIÓN
 // ----------------------------------------------------
 // ¡IMPORTANTE! Reemplaza estos valores con los de tu base de datos de Hostalia.
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'lumen_blog_db');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_HOST', 'pmysql205.dns-servicio.com:3306');
+define('DB_NAME', '11491669_lumen_blog');
+define('DB_USER', 'lumen_blog');
+define('DB_PASS', 'lumen2026');
 
 // Contraseña para acceder a la administración. ¡Cámbiala por una segura!
 define('ADMIN_PASSWORD', 'lumen2026');
