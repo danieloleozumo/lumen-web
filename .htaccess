@@ -10,9 +10,6 @@
   RewriteCond %{HTTP_HOST} ^www\.lumenmovimiento\.es$ [NC]
   RewriteRule ^(.*)$ https://lumenmovimiento.es/$1 [R=301,L]
 
-  # 0. La API PHP se sirve directamente desde la raíz (sin pasar por dist/)
-  RewriteRule ^api\.php$ api.php [L]
-
   # 1. Si la petición pide un archivo real que existe en la carpeta dist, servírselo
   RewriteCond %{DOCUMENT_ROOT}/dist/$1 -f
   RewriteRule ^(.*)$ dist/$1 [L]
