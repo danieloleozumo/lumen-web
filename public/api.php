@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 // CONFIGURACIÓN DE BASE DE DATOS Y ADMINISTRACIÓN
 // ----------------------------------------------------
 // ¡IMPORTANTE! Reemplaza estos valores con los de tu base de datos de Hostalia.
-define('DB_HOST', 'pmysql205.dns-servicio.com');
+define('DB_HOST', 'localhost');
 define('DB_PORT', '3306');
 define('DB_NAME', '11491669_lumen_blog');
 define('DB_USER', 'lumen_blog');
