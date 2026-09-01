@@ -24,14 +24,16 @@ jobs:
     - name: 🏗️ Build Project
       run: npm run build
 
-    - name: 📋 Copy api.php to dist after build
-      run: cp public/api.php dist/api.php
+    - name: 📋 Copy api.php and uploads dir to dist after build
+      run: |
+        cp public/api.php dist/api.php
+        cp -r public/uploads dist/uploads
 
-    - name: 📂 Sync files via FTP
+    - name: 📂 Sync dist/ to FTP root
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./dist/
-        server-dir: ./
+        server-dir: ./dist/
