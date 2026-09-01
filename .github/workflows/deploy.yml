@@ -24,6 +24,9 @@ jobs:
     - name: 🏗️ Build Project
       run: npm run build
 
+    - name: 📋 Copy api.php to dist after build
+      run: cp public/api.php dist/api.php
+
     - name: 📂 Sync files via FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
@@ -32,4 +35,3 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./dist/
         server-dir: ./
-

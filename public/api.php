@@ -19,7 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 // CONFIGURACIÓN DE BASE DE DATOS Y ADMINISTRACIÓN
 // ----------------------------------------------------
 // ¡IMPORTANTE! Reemplaza estos valores con los de tu base de datos de Hostalia.
-define('DB_HOST', 'pmysql205.dns-servicio.com:3306');
+define('DB_HOST', 'pmysql205.dns-servicio.com');
+define('DB_PORT', '3306');
 define('DB_NAME', '11491669_lumen_blog');
 define('DB_USER', 'lumen_blog');
 define('DB_PASS', 'lumen2026');
@@ -61,25 +62,10 @@ function json_respond($data, $status = 200) {
 $db = null;
 $db_error = null;
 
-// Solo intentamos la conexión si los parámetros de base de datos no son los valores por defecto locales (opcional),
-// o siempre intentamos conectar y capturamos el fallo.
 try {
-    // Intentar conectar al servidor MySQL (sin seleccionar DB aún, por si hay que crearla)
-    $dsn = "mysql:host=" . DB_HOST . ";charset=utf8mb4";
-    $pdo = new PDO($dsn, DB_USER, DB_PASS, [
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
-    ]);
-    
-    // Intentar crear la base de datos si no existe (algunos hostings compartidos lo bloquean)
-    try {
-        $pdo->exec("CREATE DATABASE IF NOT EXISTS `" . DB_NAME . "` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
-    } catch (PDOException $e) {
-        // Ignoramos el error si no tenemos privilegios para crear base de datos
-    }
-    
-    // Conectar a la base de datos seleccionada
-    $db = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8mb4", DB_USER, DB_PASS, [
+    // Conectar directamente a la base de datos con host y puerto separados
+    $dsn = "mysql:host=" . DB_HOST . ";port=" . DB_PORT . ";dbname=" . DB_NAME . ";charset=utf8mb4";
+    $db = new PDO($dsn, DB_USER, DB_PASS, [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
     ]);
