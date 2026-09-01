@@ -131,6 +131,30 @@ function check_auth($db) {
 // ----------------------------------------------------
 $action = isset($_GET['action']) ? $_GET['action'] : '';
 
+// ENDPOINT DE DIAGNÓSTICO TEMPORAL
+if ($action === 'diag') {
+    $info = [
+        'php_version'  => phpversion(),
+        'pdo_drivers'  => PDO::getAvailableDrivers(),
+        'db_host'      => DB_HOST,
+        'db_port'      => DB_PORT,
+        'db_name'      => DB_NAME,
+        'db_user'      => DB_USER,
+        'db_connected' => ($db !== null),
+        'db_error'     => $db_error,
+        'dsn_used'     => "mysql:host=" . DB_HOST . ";port=" . DB_PORT . ";dbname=" . DB_NAME . ";charset=utf8mb4",
+    ];
+    if ($db) {
+        try {
+            $stmt = $db->query("SELECT COUNT(*) as total FROM `lumen_articulos`");
+            $info['articulos_en_bd'] = $stmt->fetch()['total'];
+        } catch (Exception $e) {
+            $info['tabla_error'] = $e->getMessage();
+        }
+    }
+    json_respond($info);
+}
+
 // Si la acción requiere base de datos y esta no ha conectado, devolvemos error
 if (!$db && in_array($action, ['login', 'verify_token', 'create', 'delete'])) {
     json_respond([
