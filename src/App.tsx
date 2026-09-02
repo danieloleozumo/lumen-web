@@ -13,6 +13,7 @@ import { Centro } from './pages/Centro';
 import { Equipo } from './pages/Equipo';
 import { Empieza } from './pages/Empieza';
 import { Blog } from './pages/Blog';
+import { Esenciales } from './pages/Esenciales';
 import { Contacto } from './pages/Contacto';
 import { AvisoLegal } from './pages/AvisoLegal';
 import { Cookies } from './pages/Cookies';
@@ -43,6 +44,7 @@ function AppContent() {
             {currentRoute === 'equipo' && <Equipo />}
             {currentRoute === 'empieza' && <Empieza />}
             {currentRoute === 'blog' && <Blog />}
+            {currentRoute === 'esenciales' && <Esenciales />}
             {currentRoute === 'contacto' && <Contacto />}
             {currentRoute === 'aviso-legal' && <AvisoLegal />}
             {currentRoute === 'cookies' && <Cookies />}

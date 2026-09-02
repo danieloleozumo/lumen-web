@@ -47,6 +47,7 @@ export function Footer() {
           <ul className="space-y-4 font-body-md text-body-md flex flex-col items-start">
             <li><button onClick={() => navigate('entrenamientos')} className="text-on-surface-variant hover:text-primary transition-colors cursor-pointer text-left">El Método</button></li>
             <li><button onClick={() => navigate('centro')} className="text-on-surface-variant hover:text-primary transition-colors cursor-pointer text-left">El Centro</button></li>
+            <li><button onClick={() => navigate('esenciales')} className="text-on-surface-variant hover:text-primary transition-colors cursor-pointer text-left">Esenciales</button></li>
             <li><button onClick={() => navigate('equipo')} className="text-on-surface-variant hover:text-primary transition-colors cursor-pointer text-left">Nuestro Equipo</button></li>
             <li><button onClick={() => navigate('contacto')} className="text-on-surface-variant hover:text-primary transition-colors cursor-pointer text-left">Contacto</button></li>
             <li><button onClick={() => navigate('blog')} className="text-on-surface-variant hover:text-primary transition-colors cursor-pointer text-left">Blog</button></li>

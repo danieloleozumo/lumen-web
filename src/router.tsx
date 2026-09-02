@@ -1,8 +1,8 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
-type Route = 'home' | 'entrenamientos' | 'centro' | 'equipo' | 'empieza' | 'blog' | 'contacto' | 'aviso-legal' | 'cookies' | 'privacidad' | 'admin';
+type Route = 'home' | 'metodo' | 'entrenamientos' | 'centro' | 'equipo' | 'empieza' | 'blog' | 'esenciales' | 'contacto' | 'aviso-legal' | 'cookies' | 'privacidad' | 'admin';
 
-const VALID_ROUTES: Route[] = ['home', 'entrenamientos', 'centro', 'equipo', 'empieza', 'blog', 'contacto', 'aviso-legal', 'cookies', 'privacidad', 'admin'];
+const VALID_ROUTES: Route[] = ['home', 'metodo', 'entrenamientos', 'centro', 'equipo', 'empieza', 'blog', 'esenciales', 'contacto', 'aviso-legal', 'cookies', 'privacidad', 'admin'];
 
 interface RouterContextType {
   currentRoute: Route;

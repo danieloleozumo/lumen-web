@@ -88,6 +88,12 @@ export function Navigation() {
               Blog
             </button>
             <button 
+              onClick={() => navigate('esenciales')}
+              className={`${currentRoute === 'esenciales' ? 'text-primary font-bold border-b-2 border-primary pb-1' : 'text-on-surface-variant font-medium hover:text-primary'} transition-colors duration-300 cursor-pointer`}
+            >
+              Esenciales
+            </button>
+            <button 
               onClick={() => navigate('equipo')}
               className={`${currentRoute === 'equipo' ? 'text-primary font-bold border-b-2 border-primary pb-1' : 'text-on-surface-variant font-medium hover:text-primary'} transition-colors duration-300 cursor-pointer`}
             >
@@ -132,6 +138,7 @@ export function Navigation() {
             { route: 'metodo', label: 'El Método Lúmen' },
             { route: 'entrenamientos', label: 'Especialidades' },
             { route: 'centro', label: 'El Centro' },
+            { route: 'esenciales', label: 'Esenciales Lumen' },
             { route: 'equipo', label: 'Equipo' },
             { route: 'blog', label: 'Blog & Actualidad' },
             { route: 'contacto', label: 'Contacto' },
