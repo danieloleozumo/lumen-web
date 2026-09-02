@@ -8,6 +8,7 @@ import merchToalla from '../assets/images/merch_toalla.png';
 import merchCamiseta from '../assets/images/merch_camiseta.png';
 import merchTotebag from '../assets/images/merch_totebag.png';
 import merchCuaderno from '../assets/images/merch_cuaderno.png';
+import equipoNutricionImg from '../assets/images/equipo_nutricion.jpg';
 
 interface Product {
   id: string;
@@ -15,9 +16,7 @@ interface Product {
   categoria: 'practica' | 'estilo' | 'nutricion';
   categoriaEtiqueta: string;
   descripcion: string;
-  precio: string;
   imagen: string;
-  destacado?: boolean;
   proximamente?: boolean;
 }
 
@@ -28,9 +27,7 @@ const PRODUCTOS: Product[] = [
     categoria: 'practica',
     categoriaEtiqueta: 'Práctica & Estudio',
     descripcion: 'Superficie antideslizante de máxima densidad y tacto suave. Diseñada para proteger articulaciones en trabajo de suelo.',
-    precio: '45 €',
-    imagen: merchEsterilla,
-    destacado: true
+    imagen: merchEsterilla
   },
   {
     id: 'botella-termica',
@@ -38,9 +35,7 @@ const PRODUCTOS: Product[] = [
     categoria: 'estilo',
     categoriaEtiqueta: 'Hidratación & Accesorios',
     descripcion: 'Doble pared aislante para mantener tu bebida fría hasta 24h o caliente hasta 12h. Libre de BPA con acabado mate soft-touch.',
-    precio: '28 €',
-    imagen: merchBotella,
-    destacado: true
+    imagen: merchBotella
   },
   {
     id: 'toalla-microfibra',
@@ -48,7 +43,6 @@ const PRODUCTOS: Product[] = [
     categoria: 'practica',
     categoriaEtiqueta: 'Práctica & Estudio',
     descripcion: 'Microfibra técnica de secado rápido, ligera y compacta. Ideal para tus sesiones de Reformer o entrenamiento funcional.',
-    precio: '18 €',
     imagen: merchToalla
   },
   {
@@ -57,7 +51,6 @@ const PRODUCTOS: Product[] = [
     categoria: 'estilo',
     categoriaEtiqueta: 'Hidratación & Accesorios',
     descripcion: 'Diseño ergonómico con compartimentos ventilados independientes para calzado y ropa. Resistente al agua.',
-    precio: '52 €',
     imagen: merchMochila
   },
   {
@@ -66,7 +59,6 @@ const PRODUCTOS: Product[] = [
     categoria: 'estilo',
     categoriaEtiqueta: 'Hidratación & Accesorios',
     descripcion: '100% algodón orgánico de gramaje superior. Cómoda y espaciosa para llevar todo lo que necesitas a tu práctica diaria.',
-    precio: '22 €',
     imagen: merchTotebag
   },
   {
@@ -75,7 +67,6 @@ const PRODUCTOS: Product[] = [
     categoria: 'estilo',
     categoriaEtiqueta: 'Textil & Estudio',
     descripcion: 'Tejido ultra-transpirable de caída fluida y movimiento libre. Corte unisex en tonos tierra y neutros.',
-    precio: '32 €',
     imagen: merchCamiseta
   },
   {
@@ -84,27 +75,15 @@ const PRODUCTOS: Product[] = [
     categoria: 'estilo',
     categoriaEtiqueta: 'Bienestar & Hábitos',
     descripcion: 'Guía de reflexión diaria, registro de progreso de entrenamiento y planificación de bienestar consciente.',
-    precio: '16 €',
     imagen: merchCuaderno
   },
   {
-    id: 'suplemento-magnesio',
-    nombre: 'Bisglicinato de Magnesio & Recuperación',
+    id: 'nutricion-suplementacion-consciente',
+    nombre: 'Nutrición & Suplementación Consciente',
     categoria: 'nutricion',
-    categoriaEtiqueta: 'Nutrición & Suplementación',
-    descripcion: 'Fórmula limpia de alta biodisponibilidad para optimizar la relajación muscular, la calidad del sueño y reducir la fatiga.',
-    precio: 'Consultar',
-    imagen: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=800',
-    proximamente: true
-  },
-  {
-    id: 'proteina-vegetal',
-    nombre: 'Proteína Vegetal Nutrición Consciente',
-    categoria: 'nutricion',
-    categoriaEtiqueta: 'Nutrición & Suplementación',
-    descripcion: 'Mezcla limpia de proteína de guisante y arroz orgánico, rica en aminoácidos esenciales para la recuperación post-sesión.',
-    precio: 'Consultar',
-    imagen: 'https://images.unsplash.com/photo-1579722821273-0f6c7d44362f?auto=format&fit=crop&q=80&w=800',
+    categoriaEtiqueta: 'Nutrición & Salud',
+    descripcion: 'Fórmulas limpias, nutrientes esenciales y suplementación orgánica adaptada a tu ritmo de vida y recuperación muscular.',
+    imagen: equipoNutricionImg,
     proximamente: true
   }
 ];
@@ -119,7 +98,7 @@ export function Esenciales() {
   });
 
   const handleConsultarWhatsApp = (nombreProducto: string) => {
-    const texto = encodeURIComponent(`Hola, me gustaría consultar disponibilidad para adquirir el producto: ${nombreProducto} en el centro Lumen.`);
+    const texto = encodeURIComponent(`Hola, me gustaría consultar más información sobre: ${nombreProducto} en el centro Lumen.`);
     window.open(`https://wa.me/34600000000?text=${texto}`, '_blank');
   };
 
@@ -174,7 +153,7 @@ export function Esenciales() {
                   <img
                     src={prod.imagen}
                     alt={prod.nombre}
-                    className="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 rounded-lg"
                   />
                   
                   {/* Badges */}
@@ -204,16 +183,11 @@ export function Esenciales() {
                   </p>
 
                   <div className="pt-4 border-t border-outline-variant/30 flex items-center justify-between mt-auto">
-                    <div className="flex flex-col">
-                      <span className="font-label-caps text-[10px] text-on-surface-variant/70 uppercase tracking-widest">PVP Recomendado</span>
-                      <span className="font-headline-sm text-xl text-primary font-bold">{prod.precio}</span>
-                    </div>
-
                     <button
                       onClick={() => handleConsultarWhatsApp(prod.nombre)}
-                      className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant font-label-caps text-xs uppercase tracking-wider transition-all duration-300 border border-outline-variant/40"
+                      className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant font-label-caps text-xs uppercase tracking-wider transition-all duration-300 border border-outline-variant/40 font-medium"
                     >
-                      <span>Reservar en centro</span>
+                      <span>Consultar en recepción</span>
                       <span className="material-symbols-outlined text-sm">storefront</span>
                     </button>
                   </div>
@@ -229,18 +203,18 @@ export function Esenciales() {
         <div className="max-w-container-max mx-auto bg-surface-container-low border border-outline-variant/40 rounded-3xl p-8 md:p-14 text-center relative overflow-hidden">
           <div className="max-w-2xl mx-auto relative z-10">
             <span className="material-symbols-outlined text-primary text-4xl mb-4 block">nutrition</span>
-            <span className="font-label-caps text-xs tracking-widest text-secondary uppercase mb-2 block font-semibold">NUEVO DESARROLLO</span>
+            <span className="font-label-caps text-xs tracking-widest text-secondary uppercase mb-2 block font-semibold">ALIMENTACIÓN & SALUD INTEGRAL</span>
             <h2 className="font-headline-md text-headline-md-mobile md:text-headline-md text-on-background mb-4">
-              Línea de Nutrición & Suplementación Consciente
+              Nutrición & Suplementación Consciente
             </h2>
             <p className="font-body-md text-on-surface-variant mb-8">
-              Estamos seleccionando fórmulas limpias y suplementos antiinflamatorios de alta calidad para complementar tu entrenamiento y potenciar tu recuperación muscular.
+              Fórmulas limpias, nutrientes esenciales y suplementación orgánica adaptada a tu entrenamiento y bienestar diario. Consulta con nuestro equipo en el estudio para asesoramiento personalizado.
             </p>
             <button
               onClick={() => navigate('contacto')}
               className="px-8 py-3.5 rounded-full bg-primary text-on-primary font-label-caps text-xs uppercase tracking-wider font-semibold hover:bg-primary/90 transition-colors shadow-sm"
             >
-              Consultar disponibilidad en recepción
+              Consultar en el centro
             </button>
           </div>
         </div>
